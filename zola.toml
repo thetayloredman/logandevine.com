@@ -1,0 +1,11 @@
+base_url = "https://logandevine.com"
+compile_sass = true
+build_search_index = true
+generate_feeds = true
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
