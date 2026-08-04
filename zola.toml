@@ -25,6 +25,7 @@ theme = "catppuccin-mocha"
 theme = "dark"
 toc = true
 mathjax = true
+stylesheets = ["fix-image-radius.css"]
 
 [[extra.socials]]
 name = "matrix"
