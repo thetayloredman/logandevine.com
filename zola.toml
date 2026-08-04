@@ -24,8 +24,6 @@ theme = "catppuccin-mocha"
 [extra]
 theme = "dark"
 toc = true
-repo_view = true
-repo_url = "https://github.com/thetayloredman/logandevine.com"
 mathjax = true
 
 [[extra.socials]]
@@ -48,8 +46,12 @@ name = "Home"
 url = "/"
 
 [[extra.menu]]
+name = "Contact"
+url = "/contact"
+
+[[extra.menu]]
 name = "Blog"
-url = "/blog/"
+url = "/posts/"
 
 [[extra.menu]]
 name = "Projects"

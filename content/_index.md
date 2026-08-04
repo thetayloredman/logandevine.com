@@ -21,35 +21,19 @@ template = "homepage.html"
 </style>
 
 <div class="homepage-hero">
-    <h1 class="homepage-hero-title">Apollo</h1>
-    <p class="homepage-hero-subtitle">A modern and minimalistic blog theme powered by Zola.</p>
+    <h1 class="homepage-hero-title">Hi, I'm LogN.</h1>
+    <p class="homepage-hero-subtitle">
+        Open-source developer and hobbyist, working on
+        <a href="/projects">programming languages</a>,
+        <a href="https://matrix.org" target="_blank">Matrix</a>,
+        and self-hosted infrastructure.
+    </p>
 </div>
 
-# Features
+Hi! I'm Logan, but you probably know me online as LogN. I advocate for an open Internet, through
+work on open-source software, selfhosting, and the [Matrix](https://matrix.org) open standard.
+Occasionally, I write about that stuff. In my free time, I enjoy working on compilers and toying
+with programming languages, like [Zirco](https://zirco.dev/). At my day job, I work as a general
+manager at a small independent cinema!
 
-- [Light, dark, and auto themes](@/posts/configuration.md#theme-mode-theme)
-- [Projects page](@/projects/_index.md)
-- [Talks page](https://not-matthias.github.io/talks/)
-- [Analytics (GoatCounter, Umami)](@/posts/configuration.md#analytics)
-- [Social media links](@/posts/configuration.md#socials)
-- [MathJax rendering](@/posts/math-symbol.md)
-- [Taxonomies](/apollo/tags)
-- [Custom homepage](@/posts/custom-homepage.md)
-- [Comments](@/posts/configuration.md#comments-comment)
-- [Search functionality](@/posts/configuration.md#search-build-search-index)
-- [Characters](@/posts/configuration.md#character-shortcodes)
-
-Checkout all the [options you can configure](@/posts/configuration.md) and the [example pages](@/posts/_index.md).
-
-# Quick Start
-
-1.  **Add the theme as a submodule:**
-    ```bash
-    git submodule add https://github.com/not-matthias/apollo themes/apollo
-    ```
-2.  **Configure your `config.toml`:**
-    Set `theme = "apollo"` and add your site's configuration.
-3.  **Start the Zola server:**
-    ```bash
-    zola serve
-    ```
+[Come say hi!](/contact)
