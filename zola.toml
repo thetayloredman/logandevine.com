@@ -1,11 +1,58 @@
 base_url = "https://logandevine.com"
+title = "LogN"
 compile_sass = true
 build_search_index = true
 generate_feeds = true
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_json"
 
 [markdown]
+external_links_target_blank = true
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
 
 [extra]
+theme = "dark"
+toc = true
+repo_view = true
+repo_url = "https://github.com/thetayloredman/logandevine.com"
+mathjax = true
+
+[[extra.socials]]
+name = "matrix"
+url = "https://matrix.to/#/@logn:zirco.dev"
+icon = "matrix"
+
+[[extra.socials]]
+name = "github"
+url = "https://github.com/thetayloredman"
+icon = "github"
+
+[[extra.socials]]
+name = "atom"
+url = "/atom.xml"
+icon = "rss"
+
+[[extra.menu]]
+name = "Home"
+url = "/"
+
+[[extra.menu]]
+name = "Blog"
+url = "/blog/"
+
+[[extra.menu]]
+name = "Projects"
+url = "/projects/"
+
+[[extra.menu]]
+name = "Tags"
+url = "/tags/"
