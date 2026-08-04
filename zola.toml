@@ -4,7 +4,9 @@ compile_sass = true
 build_search_index = true
 generate_feeds = true
 theme = "apollo"
-taxonomies = [{ name = "tags" }]
+
+[[taxonomies]]
+name = "tags"
 
 [search]
 include_title = true
