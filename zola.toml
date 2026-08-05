@@ -23,6 +23,7 @@ theme = "catppuccin-mocha"
 
 [extra]
 theme = "dark"
+fancy_code = true
 toc = true
 mathjax = true
 stylesheets = ["fix-image-radius.css"]
