@@ -1,6 +1,6 @@
 +++
 title = "Debian + Nix: Stability Meets Reproducibility"
-date = "2026-08-04"
+date = "2026-08-05"
 authors = ["Logan Devine"]
 
 [taxonomies]
