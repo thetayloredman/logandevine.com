@@ -7,17 +7,13 @@ authors = ["Logan Devine"]
 tags = ["debian", "nix"]
 +++
 
-By now, most people have heard about NixOS. "I'm using Nix" has become the very flex that "I use
-arch btw" had always strived to be, with none of the meme.
+By now, most people have heard about NixOS. "I'm using Nix" has become the very flex that "I use arch btw" had always strived to be, with none of the meme.
 
-I've been using Debian for years. I run it everywhere, from my desktop to all of my production
-servers. It brings a familiar, slow-changing system, but the point-release model comes with a major
-downside for development: you are often working with years old toolchains.
+I've been using Debian for years. I run it everywhere, from my desktop to all of my production servers. It brings a familiar, slow-changing system, but the point-release model comes with a major downside for development: you are often working with years old toolchains.
 
 # LLVM 19!?
 
-This issue first arose for me when I was working on [Zirco](/projects/zirco/), which currently pins
-LLVM 22:
+This issue first arose for me when I was working on [Zirco](/projects/zirco/), which currently pins LLVM 22:
 
 ```toml,linenos
 [dependencies.inkwell]
@@ -37,40 +33,28 @@ llvm-18-dev/stable 1:18.1.8-18+b1 amd64
 llvm-19-dev/stable,now 1:19.1.7-3+b1 amd64 [installed,automatic]
 ```
 
-Well... LLVM doesn't provide many great options for system-wide installations here. There is a
-stage2 apt repository available, but I had various library issues with that in the past. So, I
-reached for one of the tools I had heard quite a bit about: Nix.
+Well... LLVM doesn't provide many great options for system-wide installations here. There is a stage2 apt repository available, but I had various library issues with that in the past. So, I reached for one of the tools I had heard quite a bit about: Nix.
 
 # Wait, Nix without NixOS?
 
-Many people forget that NixOS is a Linux distribution _built around_ the Nix package manager, which
-is a great tool and can be used standalone on any operating system (even macOS and Windows)!
+Many people forget that NixOS is a Linux distribution _built around_ the Nix package manager, which is a great tool and can be used standalone on any operating system (even macOS and Windows)!
 
-Nix is fundamentally built around being a reproducible build system, ensuring that it produces
-software, environments, or even full operating system configurations that are identical across
-machines.
+Nix is fundamentally built around being a reproducible build system, ensuring that it produces software, environments, or even full operating system configurations that are identical across machines.
 
 This solves one particular issue every developer will be familiar with:
 
 # It works on my machine!
 
-The classic excuse, and yet a real problem. The declarative nature of Nix helps solve this issue:
-one can define their entire development environment (packages, libraries, their versions, and even
-environment variables) in a single file, and share it with others working on the project. This
-ensures that for anyone working on the project, the environment is identical, and therefore
-eliminates fighting to find missing libraries or other mismatches between contributors.
+The classic excuse, and yet a real problem. The declarative nature of Nix helps solve this issue: one can define their entire development environment (packages, libraries, their versions, and even environment variables) in a single file, and share it with others working on the project. This
+ensures that for anyone working on the project, the environment is identical, and therefore eliminates fighting to find missing libraries or other mismatches between contributors.
 
-There are some caveats here, such as environment provided by the host operating system, but these
-issues are generally far less severe than what you'd encounter with a traditional package manager.
+There are some caveats here, such as environment provided by the host operating system, but these issues are generally far less severe than what you'd encounter with a traditional package manager.
 
-You may ask, if you are using Nix, why not just use NixOS? Well, I like Debian. I like when repos
-move slowly, except for when I need bleeding edge development tools. Nix gives me the best of both
-worlds: A system which is stable, and **temporary** environments when I need something newer.
+You may ask, if you are using Nix, why not just use NixOS? Well, I like Debian. I like when repos move slowly, except for when I need bleeding edge development tools. Nix gives me the best of both worlds: A system which is stable, and **temporary** environments when I need something newer.
 
 > If you already know Nix, I recommend skipping to [The real benefits](#the-real-benefits).
 
-So, now that you've seen the benefits of running Nix, let's get a simple development environment
-(with LLVM 22, of course) up and running on Debian!
+So, now that you've seen the benefits of running Nix, let's get a simple development environment (with LLVM 22, of course) up and running on Debian!
 
 # Installing Nix
 
@@ -88,9 +72,7 @@ $ echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 
 # A gentle introduction to Flakes
 
-You may have noticed that we enabled two experiments in the `nix.conf` file above. Although
-flakes are officially still experimental, they have been widely adopted by the Nix community and are
-often the recommended way of managing a Nix project.
+You may have noticed that we enabled two experiments in the `nix.conf` file above. Although flakes are officially still experimental, they have been widely adopted by the Nix community and are often the recommended way of managing a Nix project.
 
 To start, create a new directory for your project and create a `flake.nix` file inside.
 
@@ -106,12 +88,9 @@ To start, create a new directory for your project and create a `flake.nix` file 
 }
 ```
 
-A Flake is like Nix's manifest file. It describes a list of input flakes (things like `nixpkgs`,
-the Nix package repository, or other Nix dependencies) and a list of outputs it produces. This is
-all, of course, written in the Nix programming language!
+A Flake is like Nix's manifest file. It describes a list of input flakes (things like `nixpkgs`, the Nix package repository, or other Nix dependencies) and a list of outputs it produces. This is all, of course, written in the Nix programming language!
 
-In our case, we bring in `NixOS/nixpkgs`, specifically the `unstable` channel which is Nix's
-rolling-release branch.
+In our case, we bring in `NixOS/nixpkgs`, specifically the `unstable` channel which is Nix's rolling-release branch.
 
 ## Defining a `devShell`
 
@@ -131,20 +110,14 @@ Inside of `outputs`, we'll define a single development shell, for the `x86_64-li
 
 A few notable lines here:
 
-- `devShells.x86_64-linux.default`: defines the specific output we're declaring. In many larger
-  projects, these are automatically generated for all supported system types, but this'll do for
-  now.
-- `let pkgs = import nixpkgs { ... }; in`: nixpkgs in particular is not built for flakes yet, so it
-  is "imported" in this way. We also need to tell nixpkgs our `system`, which is our architecture
-  and OS.
+- `devShells.x86_64-linux.default`: defines the specific output we're declaring. In many larger projects, these are automatically generated for all supported system types, but this'll do for now.
+- `let pkgs = import nixpkgs { ... }; in`: nixpkgs in particular is not built for flakes yet, so it is "imported" in this way. We also need to tell nixpkgs our `system`, which is our architecture and OS.
 - `pkgs.mkShell`: creates a development shell.
-- `buildInputs = with pkgs; [];`: declares the packages we want available in our devShell, which
-  for now is nothing.
+- `buildInputs = with pkgs; [];`: declares the packages we want available in our devShell, which for now is nothing.
 
 ## Bringing in LLVM 22
 
-Now, we tell Nix to add the packages for LLVM 22 we want: let's say `llvm`, `libllvm`, `clang`, and
-`lld` (as these are what we use with Zirco).
+Now, we tell Nix to add the packages for LLVM 22 we want: let's say `llvm`, `libllvm`, `clang`, and `lld` (as these are what we use with Zirco).
 
 ```nix,linenos,hide_lines=1 10,hl_lines=3-8,linenostart=11
 { thisisjustsosyntaxhighlightinglooksright = let meow = "meow";
@@ -169,11 +142,7 @@ $ clang --version
 clang version 22.0.0 ...
 ```
 
-Nix has now grabbed the packages we needed and stored them in `/nix`, and temporarily set up the
-environment for us (e.g. `$PATH`) so that we can use this toolchain. Notice that none of this
-touches your system - no package is installed into `/usr`. When we exit the shell, our
-environment is back to normal &mdash; no more fighting with the system package manager, and you
-haven't tainted your system!
+Nix has now grabbed the packages we needed and stored them in `/nix`, and temporarily set up the environment for us (e.g. `$PATH`) so that we can use this toolchain. Notice that none of this touches your system - no package is installed into `/usr`. When we exit the shell, our environment is back to normal &mdash; no more fighting with the system package manager, and you haven't tainted your system!
 
 # The real benefits
 
@@ -188,13 +157,8 @@ Nix also lets you:
 
 # Conclusion
 
-I installed Nix because I needed LLVM 22 on Debian, but I stayed because of how it empowered me
-to write software and manage my systems in a way where they work almost everywhere. Debian still
-remains my system of choice, but Nix has become a tool I use daily.
+I installed Nix because I needed LLVM 22 on Debian, but I stayed because of how it empowered me to write software and manage my systems in a way where they work almost everywhere. Debian still remains my system of choice, but Nix has become a tool I use daily.
 
-There's much more to it: I haven't talked about Home Manager, packaging for Nix, and more, but we'll
-get to that in future posts.
+There's much more to it: I haven't talked about Home Manager, packaging for Nix, and more, but we'll get to that in future posts.
 
-In the meantime, if you're new to Nix, you should give [Nix Pills](https://nixos.org/guides/nix-pills/)
-a read, and if you're a seasoned Nix/NixOS user, maybe try it out on top of your distro of choice.
-You'd might be surprised at what that balance can do.
+In the meantime, if you're new to Nix, you should give [Nix Pills](https://nixos.org/guides/nix-pills/) a read, and if you're a seasoned Nix/NixOS user, maybe try it out on top of your distro of choice. You'd might be surprised at what that balance can do.
