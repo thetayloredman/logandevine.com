@@ -1,6 +1,6 @@
 +++
 title = "Who Gets The Fast Path?"
-date = "2026-08-28"
+date = "2026-08-29"
 authors = ["Logan Devine"]
 
 [taxonomies]
