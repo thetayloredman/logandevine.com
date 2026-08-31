@@ -1,6 +1,7 @@
 +++
 title = "Who Gets The Fast Path?"
 date = "2026-08-29"
+updated = "2026-08-30"
 authors = ["Logan Devine"]
 
 [taxonomies]
@@ -19,7 +20,7 @@ For a compiler however, determining what counts as an appropriate workload is th
 
 For the computational beasts they are, CPUs are shockingly good at guessing. Almost all modern CPUs contain mechanisms for branch prediction and speculative execution ([as good as they may be](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>)). Compilers are aware of this, and perform various optimizations so that the CPU is executing common instructions close together, often even linearly. This allows streamlined execution which reduces costly cache misses and mispredictions.
 
-The next step up is to hint to the compiler what branches are frequent: Rust has the `likely_unlikely` experiment which provides functions like [`std::hint::likely`](https://doc.rust-lang.org/std/hint/fn.likely.html), and has stable support for [`std::hint::cold_path`](https://doc.rust-lang.org/std/hint/fn.cold_path.html) and the `#[cold]` function attribute. C similarly has `__builtin_expect`, and Zirco even has [the `unreachable` keyword](https://book.zirco.dev/reference.html#615-unreachable-statements) to indicate a section of unreachable code.
+The next step up is to hint to the compiler what branches are frequent: Rust has the `likely_unlikely` experiment which provides functions like [`std::hint::likely`](https://doc.rust-lang.org/std/hint/fn.likely.html), and has stable support for [`std::hint::cold_path`](https://doc.rust-lang.org/std/hint/fn.cold_path.html) and the `#[cold]` function attribute. Many C compilers similarly support `__builtin_expect`, and Zirco even has [the `unreachable` keyword](https://book.zirco.dev/reference.html#615-unreachable-statements) to indicate a section of unreachable code.
 
 The difference can be substantial, but these optimizations should not be applied without proper benchmark data to back them, as they can make code less readable and even harm performance if used incorrectly. In the case that the compiler is not adequately guessing the runtime behavior of your code, PGO allows the compiler to use actual profiling information instead of static analysis to determine the hot path. BOLT takes this a step further by rearranging the final compiled binary in a third step, pushing rarely used functions further down the binary.
 
