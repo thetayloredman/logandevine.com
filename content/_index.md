@@ -49,6 +49,8 @@ manager at a small independent cinema!
     <img src="/images/88x31.gif" alt="LogN" width="88" height="31" />
 </a>
 
+Please source the image directly from my site when embedding!
+
 Other cool people worth visiting:
 
 {{ button(
@@ -60,4 +62,19 @@ Other cool people worth visiting:
     url="https://squarebowl.club/",
     src="https://squarebowl.club/images/88x31/plate.gif",
     alt="Plate"
+) }}
+{{ button(
+    url="https://gingershaped.computer/",
+    src="https://gingershaped.computer/8831/button.png",
+    alt="Ginger"
+) }}
+{{ button(
+    url="https://timedout.uk/",
+    src="https://timedout.uk/88x31s/nexy7574-new.gif",
+    alt="Nex"
+) }}
+{{ button(
+    url="https://matrix.org/",
+    src="https://codestorm.net/buttons/matrix.gif",
+    alt="Matrix"
 ) }}
