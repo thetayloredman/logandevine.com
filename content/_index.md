@@ -78,3 +78,8 @@ Other cool people worth visiting:
     src="https://codestorm.net/buttons/matrix.gif",
     alt="Matrix"
 ) }}
+{{ button(
+    url="/",
+    src="/images/beemovie.gif",
+    alt="the entire bee movie"
+) }}
