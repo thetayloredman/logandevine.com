@@ -26,7 +26,7 @@ theme = "dark"
 fancy_code = true
 toc = true
 mathjax = true
-stylesheets = ["fix-image-radius.css"]
+stylesheets = ["fix-image-radius.css", "no-88x31-borders.css"]
 
 [[extra.socials]]
 name = "matrix"

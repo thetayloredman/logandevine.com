@@ -1,5 +1,10 @@
 +++
 template = "homepage.html"
+
+[[extra.buttons]]
+url = "https://codestorm.net/"
+src = "https://codestorm.net/buttons/sky.gif"
+alt = "Sky"
 +++
 
 <style>
@@ -37,3 +42,22 @@ with programming languages, like [Zirco](https://zirco.dev/). At my day job, I w
 manager at a small independent cinema!
 
 [Come say hi!](/contact)
+
+## Buttons!
+
+<a href="https://logandevine.com/" target="_blank" class="button88x31">
+    <img src="/images/88x31.gif" alt="LogN" width="88" height="31" />
+</a>
+
+Other cool people worth visiting:
+
+{{ button(
+    url="https://codestorm.net/",
+    src="https://codestorm.net/buttons/sky.gif",
+    alt="Sky"
+) }}
+{{ button(
+    url="https://squarebowl.club/",
+    src="https://squarebowl.club/images/88x31/plate.gif",
+    alt="Plate"
+) }}
