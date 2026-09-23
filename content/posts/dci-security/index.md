@@ -34,7 +34,7 @@ As you can see, this process is far different than the traditional DRM one might
 
 Unlike the old days where cinemas received trucks and had to unload reels of film, digital cinemas receive films in the form of DCPs, or Digital Cinema Packages. These large folders often are delivered by whatever mechanism the distributor desires: many come over satellite, via the standard Internet, and sometimes via a specialized hard drive.
 
-DCPs are not simple video containers like MPEG4, they are in fact directories (folders) containing primarily XML files and MXF containers. These MXF containers contain Linear PCM audio and JPEG2000 frames for audio.
+DCPs are not simple video containers like MPEG4, they are in fact directories containing primarily XML files and MXF containers. These MXF containers contain Linear PCM audio and JPEG-2000 frames for video.
 
 ![A sample of a DCP's contents, containing 4 XML files and 2 MXF containers](./dcp-contents.png)
 
