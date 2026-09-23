@@ -38,7 +38,7 @@ DCPs are not simple video containers like MPEG4, they are in fact directories co
 
 ![A sample of a DCP's contents, containing 4 XML files and 2 MXF containers](./dcp-contents.png)
 
-This is the structure of a simple DCP. Inside, there is a volume index (VOLINDEX.xml), an asset map (ASSETMAP.xml), a Packing List (pkl\_...) and a Composition Playlist (cpl\_...). These 4 XML files inevitibly reference the 2 MXF "reels" containing both the video and audio "essences" of the DCP.
+This is the structure of a simple DCP. Inside, there is a volume index (VOLINDEX.xml), an asset map (ASSETMAP.xml), a Packing List (pkl\_...) and a Composition Playlist (cpl\_...). These 4 XML files inevitably reference the 2 MXF "reels" containing both the video and audio "essences" of the DCP.
 
 {% note(header="Notice the folder's name?") %}
 
