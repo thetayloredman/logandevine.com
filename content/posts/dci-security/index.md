@@ -1,6 +1,6 @@
 +++
 title = "Inside Digital Cinema Security Architecture"
-date = "2026-09-23"
+date = "2026-09-22"
 authors = ["Logan Devine"]
 
 [taxonomies]
