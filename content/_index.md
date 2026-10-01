@@ -49,9 +49,10 @@ manager at a small independent cinema!
     <img src="/images/88x31.gif" alt="LogN" width="88" height="31" />
 </a>
 
-Please source the image directly from my site when embedding!
+Please [source the image directly from my site](https://www.31a05b.net/s/note-on-8831.html) when
+embedding it.
 
-Other cool people worth visiting:
+Other cool sites worth visiting:
 
 {{ button(
     url="https://codestorm.net/",
@@ -74,9 +75,29 @@ Other cool people worth visiting:
     alt="Nex"
 ) }}
 {{ button(
+    url="https://que.trolling.win/",
+    src="https://que.trolling.win/assets/button-en.png",
+    alt="Vicky"
+) }}
+{{ button(
+    url="https://www.31a05b.net/",
+    src="https://www.31a05b.net/a/8831/31a05b.png",
+    alt="31a06b"
+) }}
+{{ button(
     url="https://matrix.org/",
     src="https://codestorm.net/buttons/matrix.gif",
     alt="Matrix"
+) }}
+{{ button(
+    url="https://debian.org",
+    src="https://cyber.dabamos.de/88x31/debian.gif",
+    alt="Powered by Debian"
+) }}
+{{ button(
+    url="https://nixos.org/",
+    src="https://s3.us-west-000.backblazeb2.com/nyaabucket/ff15b2195b965642eea0d9b793b66e856459445f934db0c00017e31ac79af0d9/powered_by_nixos.gif",
+    alt="Powered by NixOS"
 ) }}
 {{ button(
     url="/",
