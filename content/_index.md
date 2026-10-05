@@ -82,7 +82,12 @@ Other cool sites worth visiting:
 {{ button(
     url="https://www.31a05b.net/",
     src="https://www.31a05b.net/a/8831/31a05b.png",
-    alt="31a06b"
+    alt="31a05b"
+) }}
+{{ button(
+    url="https://projxyz.net/",
+    src="https://projxyz.net/media/projxyz.net1.png",
+    alt="projxyz.net"
 ) }}
 {{ button(
     url="https://matrix.org/",
