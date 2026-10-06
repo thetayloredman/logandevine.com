@@ -1,10 +1,5 @@
 +++
 template = "homepage.html"
-
-[[extra.buttons]]
-url = "https://codestorm.net/"
-src = "https://codestorm.net/buttons/sky.gif"
-alt = "Sky"
 +++
 
 <style>
