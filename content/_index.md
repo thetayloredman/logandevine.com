@@ -80,6 +80,11 @@ Other cool sites worth visiting:
     alt="31a05b"
 ) }}
 {{ button(
+    url="https://austinhuang.me/",
+    src="https://austinhuang.me/assets/88x31.svg",
+    alt="Austin Huang"
+) }}
+{{ button(
     url="https://projxyz.net/",
     src="https://projxyz.net/media/projxyz.net1.png",
     alt="projxyz.net"
