@@ -31,7 +31,7 @@ The majority of my senior year coursework has been taken at our local community 
 
 Currently, those two courses are General Physics I and American Sign Language Level I. On the physics side of things, that class has been a mess to deal with because of the way it's structured, and by this point in the course over 70% of the class has dropped, but I'm still managing to hang on (and doing quite well, actually)!
 
-ASL has also been a really cool class. I didn't have much of an idea of what it would be like walking in, but it has genuinely been one of the more enjoyable courses I've taken&mdash;the instructor is the funniest guy ever. I still have to do a final paper for that class, which I'm not very excited for given how busy my coming week will be, but it's probably time to lock in there.
+ASL has also been a really cool class. I didn't have much of an idea of what it would be like walking in, but it has genuinely been one of the more enjoyable courses I've taken&mdash;the instructor is the funniest guy ever. I still have to do a final paper for that class, which I'm not very excited for given how busy this coming week will be, but it's probably time to lock in there.
 
 Finals are next week, and I am not prepared, but generally my approach here has been to YOLO it and see how I do. It hasn't failed me yet. It sure will one day.
 
