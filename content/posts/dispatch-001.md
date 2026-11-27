@@ -68,7 +68,7 @@ Besides Presence v2, I've got a few other proposals which need care and watering
 
 ## Introducing Nebu!
 
-I've yet to really announce this publicly, but a few months ago I also started working on [Nebu](https://github.com/matrix-nebu/nebu), which is a new work-in-progress TypeScript SDK for the client-server API. Nebu aims to bring a level of structure familiar to Discord.js users that I personally didn't believe other SDKs provided, alongside eventually providing a higher level piece-based bot framework along the lines of [Sapphire](https://sapphire.js.org/). The goal here was to create such a framework, but we realized we needed a better SDK to make that possible.
+I've yet to really announce this publicly, but a few months ago I also started working on [Nebu](https://github.com/matrix-nebu/nebu), which is a new work-in-progress TypeScript SDK for the client-server API. Nebu aims to bring a level of structure familiar to Discord.js users that I personally didn't believe other SDKs provided, alongside eventually providing a higher level piece-based bot framework along the lines of [Sapphire](https://sapphirejs.dev/). The goal here was to create such a framework, but we realized we needed a better SDK to make that possible.
 
 Right now, Nebu has a well-designed REST handler, and can send messages. There's also a work-in-progress sync engine, although it isn't very useful yet.
 
