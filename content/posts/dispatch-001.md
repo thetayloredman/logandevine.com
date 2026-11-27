@@ -4,7 +4,7 @@ date = "2026-11-26"
 authors = ["Logan Devine"]
 
 [taxonomies]
-tags = ["dispatches"]
+tags = ["dispatches", "nix", "zirco", "swe", "cinema"]
 +++
 
 Well, hey! It's been a few months since I've had a chance to write anything just because I wanted to, so I felt like I'd try this new style out, thanks to a recommendation from Nex who recently [wrote something similar](https://nexy.blog/2026/09/19/nexy-digest-edition-1/).
